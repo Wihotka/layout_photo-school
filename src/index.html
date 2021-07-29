@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>High pass</title>
+    <!-- Preload Fonts -->
+    <link rel="preload" href="/fonts/roboto-v27-latin_cyrillic-regular.woff2" as="font">
+    <link rel="preload" href="/fonts/roboto-v27-latin_cyrillic-700.woff2" as="font">
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="/main.css">
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <!-- index.js Script -->
+    <script src="/main.js" defer></script>
+    <!-- <script src="/libs/jquery.js" defer></script>
+    <script src="/libs/yandex-map.js" defer></script>
+    <script src="/js/index.js" defer></script> -->
+</head>
+<body>
+    <header class="header">
+        <div class="header__content container">
+            <h1 class="visually-hidden">High pass</h1>
+            <a href="#" class="header__logo">
+                <img src="/images/header/logo.png" alt="Лого" class="header__logo-img" />
+            </a>
+            <ul class="header__nav" id="menu">
+                <li class="header__nav-item">
+                    <a href="#about" class="header__nav-link">О студии</a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="#projects" class="header__nav-link">Наши проекты</a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="#services" class="header__nav-link">Услуги</a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="#masterstrokes" class="header__nav-link">Мастер-классы</a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="#contacts" class="header__nav-link">Контакты</a>
+                </li>
+            </ul>
+            <div class="header__socials">
+                <a href="#" class="header__social">
+                    <svg width="30" height="30">
+                        <use xlink:href="/images/sprite.svg#instagram-icon"></use>
+                    </svg>
+                </a>
+                <a href="#" class="header__social">
+                    <svg width="30" height="30">
+                        <use xlink:href="/images/sprite.svg#facebook-icon"></use>
+                    </svg>
+                </a>
+                <a href="#" class="header__social">
+                    <svg width="30" height="30">
+                        <use xlink:href="/images/sprite.svg#vk-icon"></use>
+                    </svg>
+                </a>
+            </div>
+            <a href="tel:+749542423532" class="header__call">
+                <svg width="22" height="22" class="header__call-icon">
+                    <use xlink:href="/images/sprite.svg#call-icon"></use>
+                </svg>
+                <span>+7 (495) 42-423-532</span>
+            </a>
+            <form class="header__search">
+                <input type="text" placeholder="Что будем искать?" class="header__search-input">
+                <svg width="24" height="24" class="header__search-icon">
+                    <use xlink:href="/images/sprite.svg#search-icon"></use>
+                </svg>
+            </form>
+            <button class="header__burger"></button>
+        </div>
+    </header>
+    <main>
+        <section class="hero container">
+            <div class="hero__offer">
+                <span class="hero__inscription">#мастеркласс</span>
+                <div class="hero__description">
+                    <span class="hero__caption">Мастер-класс от Игоря Робова</span>
+                    <h2 class="hero__title">Неоновый фотосет 2.0 7 июля 20:00</h2>
+                    <a href="#" class="hero__more">Узнать больше</a>
+                </div>
+            </div>
+            <div class="hero__works">
+                <h3 class="hero__heading">Работы участников предыдущего мастер-класса</h3>
+                <div class="hero__works-content">
+                    <div class="hero__work hero__work-1"></div>
+                    <div class="hero__work hero__work-2"></div>
+                    <div class="hero__work hero__work-3"></div>
+                </div>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="about__content container">
+                <div class="about__textblock">
+                    <h3 class="about__heading">О студии</h3>
+                    <p class="about__text">В рамках спецификации современных стандартов, интерактивные прототипы, инициированные исключительно синтетически, ограничены исключительно образом мышления. Предварительные выводы неутешительны: высокотехнологичная концепция общественного уклада требует от нас анализа соответствующих условий активизации! Следует отметить, что семантический разбор внешних противодействий  фиксирует необходимость распределения внутренних резервов и ресурсов. Безусловно, граница обучения кадров предоставляет широкие возможности для первоочередных требований. Повседневная практика показывает, что глубокий уровень погружения предполагает независимые способы реализации новых принципов формирования материально-технической и кадровой базы. Приятно, граждане, наблюдать, как явные признаки институционализации являются только методом политического участия и нарушающими общечеловеческие нормы этики.</p>
+                </div>
+                <div class="about__foto"></div>
+                <div class="about__subscribe">
+                    <label class="about__subscribe-caption">Подписаться на рассылку</label>
+                    <form class="about__form" id="about-form">
+                        <div class="about__input-container">
+                            <input type="email" placeholder="E-mail" class="about__input" id="about-email">
+                        </div>
+                        <button type="submit" class="about__submit-btn">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="projects container" id="projects">
+            <h3 class="projects__heading">Наши проекты</h3>
+            <div class="projects__wrapper projects__wrapper--one">
+                <div class="projects__block projects__block-small projects__block-1">
+                    <div class="projects__foto projects__foto-1">
+                        <span class="projects__inscription">#пейзаж</span>
+                    </div>
+                    <div class="projects__description">
+                        <p class="projects__text">Синтетически, смешаны с не уникальными данными до степени...</p>
+                        <div class="projects__date">
+                            <svg width="14" height="14" class="projects__calendar">
+                                <use xlink:href="/images/sprite.svg#calendar-icon"></use>
+                            </svg>
+                            <span class="projects__date-text">16 июня</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__block projects__block-small projects__block-2">
+                    <div class="projects__foto projects__foto-2">
+                        <span class="projects__inscription">#портрет</span>
+                    </div>
+                    <div class="projects__description">
+                        <p class="projects__text">В своём стремлении улучшить опыт мы упускаем, что явные...</p>
+                        <div class="projects__date">
+                            <svg width="14" height="14" class="projects__calendar">
+                                <use xlink:href="/images/sprite.svg#calendar-icon"></use>
+                            </svg>
+                            <span class="projects__date-text">28 мая</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__block projects__block-small projects__block-3">
+                    <div class="projects__foto projects__foto-3">
+                        <span class="projects__inscription">#предмет</span>
+                    </div>
+                    <div class="projects__description">
+                        <p class="projects__text">Равным образом, высокое качество позиционных...</p>
+                        <div class="projects__date">
+                            <svg width="14" height="14" class="projects__calendar">
+                                <use xlink:href="/images/sprite.svg#calendar-icon"></use>
+                            </svg>
+                            <span class="projects__date-text">14 мая</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__block projects__block-big projects__block-4">
+                    <span class="projects__inscription--big">#fuji</span>
+                    <div class="projects__description">
+                        <div class="projects__date--big">
+                            <svg width="14" height="14" class="projects__calendar">
+                                <use xlink:href="/images/sprite.svg#calendar-icon"></use>
+                            </svg>
+                            <span class="projects__date-text">9 апреля</span>
+                        </div>
+                        <h3 class="projects__title">Cемантический разбор</h3>
+                        <p class="projects__text--big">В рамках спецификации современных стандартов, интерактивные прототипы</p>
+                    </div>
+                    <a href="#" class="projects__about">О проекте</a>
+                </div>
+                <div class="projects__block projects__block-big projects__block-5">
+                    <span class="projects__inscription--big">#проектзабвение</span>
+                    <div class="projects__description">
+                        <div class="projects__date--big">
+                            <svg width="14" height="14" class="projects__calendar">
+                                <use xlink:href="/images/sprite.svg#calendar-icon"></use>
+                            </svg>
+                            <span class="projects__date-text">20 марта</span>
+                        </div>
+                        <h3 class="projects__title">Забение</h3>
+                        <p class="projects__text--big">Играет важную роль в формировании глубокомысленных рассуждений</p>
+                    </div>
+                    <a href="#" class="projects__about">О проекте</a>
+                </div>
+                <div class="projects__block projects__block-middle projects__block-6">
+                    <div class="projects__foto projects__foto-6">
+                        <span class="projects__inscription">#ретушь</span>
+                    </div>
+                    <div class="projects__description">
+                        <p class="projects__text">Как принято считать, многие известные личности и по сей день остаются уделом либералов...</p>
+                        <div class="projects__date">
+                            <svg width="14" height="14" class="projects__calendar">
+                                <use xlink:href="/images/sprite.svg#calendar-icon"></use>
+                            </svg>
+                            <span class="projects__date-text">9 марта</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__block projects__block-middle projects__block-7">
+                    <div class="projects__foto projects__foto-7">
+                        <span class="projects__inscription">#портрет</span>
+                    </div>
+                    <div class="projects__description">
+                        <p class="projects__text">С учётом сложившейся международной обстановки, новая модель организационной...</p>
+                        <div class="projects__date">
+                            <svg width="14" height="14" class="projects__calendar">
+                                <use xlink:href="/images/sprite.svg#calendar-icon"></use>
+                            </svg>
+                            <span class="projects__date-text">1 марта</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__block projects__block-big projects__block-8">
+                    <span class="projects__inscription--big">#портрет</span>
+                    <div class="projects__description">
+                        <div class="projects__date--big">
+                            <svg width="14" height="14" class="projects__calendar">
+                                <use xlink:href="/images/sprite.svg#calendar-icon"></use>
+                            </svg>
+                            <span class="projects__date-text">24 февраля</span>
+                        </div>
+                        <h3 class="projects__title">Cпорная точка зрения</h3>
+                        <p class="projects__text--big">Ясность нашей позиции очевидна: убеждённость некоторых оппонентов</p>
+                    </div>
+                    <a href="#" class="projects__about">О проекте</a>
+                </div>
+                <div class="projects__block projects__block-middle projects__block-9">
+                    <div class="projects__foto projects__foto-9">
+                        <span class="projects__inscription">#ретушь</span>
+                    </div>
+                    <div class="projects__description">
+                        <p class="projects__text">Идейные соображения высшего порядка, а также убеждённость некоторых оппонентов...</p>
+                        <div class="projects__date">
+                            <svg width="14" height="14" class="projects__calendar">
+                                <use xlink:href="/images/sprite.svg#calendar-icon"></use>
+                            </svg>
+                            <span class="projects__date-text">20 февраля</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__block projects__block-middle projects__block-10">
+                    <div class="projects__foto projects__foto-10">
+                        <span class="projects__inscription">#портрет</span>
+                    </div>
+                    <div class="projects__description">
+                        <p class="projects__text">Прежде всего, повышение уровня гражданского сознания говорит о возможностях приоритизации...</p>
+                        <div class="projects__date">
+                            <svg width="14" height="14" class="projects__calendar">
+                                <use xlink:href="/images/sprite.svg#calendar-icon"></use>
+                            </svg>
+                            <span class="projects__date-text">18 февраля</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__block projects__block-small projects__block-11">
+                    <div class="projects__foto projects__foto-11">
+                        <span class="projects__inscription">#пейзаж</span>
+                    </div>
+                    <div class="projects__description">
+                        <p class="projects__text">Равным образом, сложившаяся структура организации...</p>
+                        <div class="projects__date">
+                            <svg width="14" height="14" class="projects__calendar">
+                                <use xlink:href="/images/sprite.svg#calendar-icon"></use>
+                            </svg>
+                            <span class="projects__date-text">15 февраля</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__block projects__block-small projects__block-12">
+                    <div class="projects__foto projects__foto-12">
+                        <span class="projects__inscription">#предмет</span>
+                    </div>
+                    <div class="projects__description">
+                        <p class="projects__text">Безусловно, реализация намеченных плановых заданий...</p>
+                        <div class="projects__date">
+                            <svg width="14" height="14" class="projects__calendar">
+                                <use xlink:href="/images/sprite.svg#calendar-icon"></use>
+                            </svg>
+                            <span class="projects__date-text">10 февраля</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__block projects__block-small projects__block-13">
+                    <div class="projects__foto projects__foto-13">
+                        <span class="projects__inscription">#пейзаж</span>
+                    </div>
+                    <div class="projects__description">
+                        <p class="projects__text">Безусловно, курс на социальный национальный...</p>
+                        <div class="projects__date">
+                            <svg width="14" height="14" class="projects__calendar">
+                                <use xlink:href="/images/sprite.svg#calendar-icon"></use>
+                            </svg>
+                            <span class="projects__date-text">7 февраля</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__block projects__block-big projects__block-14">
+                    <span class="projects__inscription--big">#проектджаз</span>
+                    <div class="projects__description">
+                        <div class="projects__date--big">
+                            <svg width="14" height="14" class="projects__calendar">
+                                <use xlink:href="/images/sprite.svg#calendar-icon"></use>
+                            </svg>
+                            <span class="projects__date-text">2 февраля</span>
+                        </div>
+                        <h3 class="projects__title">Задания по разработке своевременного</h3>
+                        <p class="projects__text--big">Повседневная практика показывает, что сложившаяся структура организации играет важную роль</p>
+                    </div>
+                    <a href="#" class="projects__about">О проекте</a>
+                </div>
+            </div>
+            <div class="projects__pages">
+                <button class="projects__page-btn projects__page-btn--active" data-path="one">1</button>
+                <button class="projects__page-btn" data-path="two">2</button>
+            </div>
+        </section>
+        <section class="services container" id="services">
+            <div class="services__content">
+                <div class="services__col-1">
+                    <h3 class="services__heading">Услуги студии</h3>
+                    <div class="services__tabs services__tabs--main">
+                        <button class="services__tab services__tab--active" data-path="main">Основной перечень</button>
+                        <button class="services__tab" data-path="extra">Услуги по ретуши</button>
+                    </div>
+                    <div class="services__wrapper services__wrapper--main">
+                        <div class="services__list services__list--main services__list--active" data-list="main">
+                            <div class="services__list-item services__list-item--main">
+                                <div class="services__list-img services__list-img-1"></div>
+                                <div class="services__list-description">
+                                    <a href="#" class="services__list-title">Высокий уровень вовлечения</a>
+                                    <p class="services__list-text">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.</p>
+                                    <a href="#" class="services__list-more">
+                                        <span class="services__list-more-text">Подробнее</span>
+                                        <svg width="19" height="14" class="services__arrow">
+                                            <use xlink:href="/images/sprite.svg#arrow-icon"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="services__list-item services__list-item--main">
+                                <div class="services__list-img services__list-img-2"></div>
+                                <div class="services__list-description">
+                                    <a href="#" class="services__list-title">Диаграммы связей</a>
+                                    <p class="services__list-text">Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий влечет за собой процесс.</p>
+                                    <a href="#" class="services__list-more">
+                                        <span class="services__list-more-text">Подробнее</span>
+                                        <svg width="19" height="14" class="services__arrow">
+                                            <use xlink:href="/images/sprite.svg#arrow-icon"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="services__list-item services__list-item--main">
+                                <div class="services__list-img services__list-img-3"></div>
+                                <div class="services__list-description">
+                                    <a href="#" class="services__list-title">Высокотехнологичная концепция</a>
+                                    <p class="services__list-text">В частности, убеждённость некоторых оппонентов способствует подготовке и реализации анализа существующих паттернов.</p>
+                                    <a href="#" class="services__list-more">
+                                        <span class="services__list-more-text">Подробнее</span>
+                                        <svg width="19" height="14" class="services__arrow">
+                                            <use xlink:href="/images/sprite.svg#arrow-icon"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="services__list-item services__list-item--main">
+                                <div class="services__list-img services__list-img-4"></div>
+                                <div class="services__list-description">
+                                    <a href="#" class="services__list-title">Сложившаяся структура организации</a>
+                                    <p class="services__list-text">Кстати,  сторонники тоталитаризма в науке будут объединены в целые кластеры себе подобных.</p>
+                                    <a href="#" class="services__list-more">
+                                        <span class="services__list-more-text">Подробнее</span>
+                                        <svg width="19" height="14" class="services__arrow">
+                                            <use xlink:href="/images/sprite.svg#arrow-icon"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="services__list-item services__list-item--main">
+                                <div class="services__list-img services__list-img-5"></div>
+                                <div class="services__list-description">
+                                    <a href="#" class="services__list-title">Внутренние резервы и ресурсы</a>
+                                    <p class="services__list-text">Банальные, но неопровержимые выводы, а также ключевые особенности структуры проекта являются только методом.</p>
+                                    <a href="#" class="services__list-more">
+                                        <span class="services__list-more-text">Подробнее</span>
+                                        <svg width="19" height="14" class="services__arrow">
+                                            <use xlink:href="/images/sprite.svg#arrow-icon"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services__list services__list--extra" data-list="extra">
+                            <div class="services__list-item services__list-item--extra">
+                                <div class="services__list-img services__list-img--extra services__list-img-6"></div>
+                                <div class="services__list-description">
+                                    <a href="#" class="services__list-title services__list-title--extra">Принимая во внимание показатели</a>
+                                    <a href="#" class="services__list-more">
+                                        <span class="services__list-more-text">Подробнее</span>
+                                        <svg width="19" height="14" class="services__arrow">
+                                            <use xlink:href="/images/sprite.svg#arrow-icon"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="services__list-item services__list-item--extra">
+                                <div class="services__list-img services__list-img--extra services__list-img-7"></div>
+                                <div class="services__list-description">
+                                    <a href="#" class="services__list-title services__list-title--extra">Таким образом, выбранный нами...</a>
+                                    <a href="#" class="services__list-more">
+                                        <span class="services__list-more-text">Подробнее</span>
+                                        <svg width="19" height="14" class="services__arrow">
+                                            <use xlink:href="/images/sprite.svg#arrow-icon"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="services__list-item services__list-item--extra">
+                                <div class="services__list-img services__list-img--extra services__list-img-8"></div>
+                                <div class="services__list-description">
+                                    <a href="#" class="services__list-title services__list-title--extra">Также как высокое качество...</a>
+                                    <a href="#" class="services__list-more">
+                                        <span class="services__list-more-text">Подробнее</span>
+                                        <svg width="19" height="14" class="services__arrow">
+                                            <use xlink:href="/images/sprite.svg#arrow-icon"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="services__list-item services__list-item--extra">
+                                <div class="services__list-img services__list-img--extra services__list-img-9"></div>
+                                <div class="services__list-description">
+                                    <a href="#" class="services__list-title services__list-title--extra">Безусловно, семантический разбор...</a>
+                                    <a href="#" class="services__list-more">
+                                        <span class="services__list-more-text">Подробнее</span>
+                                        <svg width="19" height="14" class="services__arrow">
+                                            <use xlink:href="/images/sprite.svg#arrow-icon"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="services__list-item services__list-item--extra">
+                                <div class="services__list-img services__list-img--extra services__list-img-10"></div>
+                                <div class="services__list-description">
+                                    <a href="#" class="services__list-title services__list-title--extra">Внезапно, предприниматели в интернете...</a>
+                                    <a href="#" class="services__list-more">
+                                        <span class="services__list-more-text">Подробнее</span>
+                                        <svg width="19" height="14" class="services__arrow">
+                                            <use xlink:href="/images/sprite.svg#arrow-icon"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="services__list-item services__list-item--extra">
+                                <div class="services__list-img services__list-img--extra services__list-img-11"></div>
+                                <div class="services__list-description">
+                                    <a href="#" class="services__list-title services__list-title--extra">Есть над чем подумать: активные...</a>
+                                    <a href="#" class="services__list-more">
+                                        <span class="services__list-more-text">Подробнее</span>
+                                        <svg width="19" height="14" class="services__arrow">
+                                            <use xlink:href="/images/sprite.svg#arrow-icon"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="services__list-item services__list-item--extra">
+                                <div class="services__list-img services__list-img--extra services__list-img-12"></div>
+                                <div class="services__list-description">
+                                    <a href="#" class="services__list-title services__list-title--extra">Сделанные на базе аналитики выводы...</a>
+                                    <a href="#" class="services__list-more">
+                                        <span class="services__list-more-text">Подробнее</span>
+                                        <svg width="19" height="14" class="services__arrow">
+                                            <use xlink:href="/images/sprite.svg#arrow-icon"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="services__list-item services__list-item--extra">
+                                <div class="services__list-img services__list-img--extra services__list-img-13"></div>
+                                <div class="services__list-description">
+                                    <a href="#" class="services__list-title services__list-title--extra">Как принято считать, сторонники...</a>
+                                    <a href="#" class="services__list-more">
+                                        <span class="services__list-more-text">Подробнее</span>
+                                        <svg width="19" height="14" class="services__arrow">
+                                            <use xlink:href="/images/sprite.svg#arrow-icon"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="services__list-item services__list-item--extra">
+                                <div class="services__list-img services__list-img--extra services__list-img-14"></div>
+                                <div class="services__list-description">
+                                    <a href="#" class="services__list-title services__list-title--extra">Задача организации, в особенности...</a>
+                                    <a href="#" class="services__list-more">
+                                        <span class="services__list-more-text">Подробнее</span>
+                                        <svg width="19" height="14" class="services__arrow">
+                                            <use xlink:href="/images/sprite.svg#arrow-icon"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="services__list-item services__list-item--extra">
+                                <div class="services__list-img services__list-img--extra services__list-img-15"></div>
+                                <div class="services__list-description">
+                                    <a href="#" class="services__list-title services__list-title--extra">Активно развивающиеся страны...</a>
+                                    <a href="#" class="services__list-more">
+                                        <span class="services__list-more-text">Подробнее</span>
+                                        <svg width="19" height="14" class="services__arrow">
+                                            <use xlink:href="/images/sprite.svg#arrow-icon"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="services__col-2">
+                    <div class="services__ad">
+                        <div class="services__ad-row-1">
+                            <h2 class="services__ad-title">Акция!</h2>
+                            <span class="services__ad-caption">Только в июне</span>
+                        </div>
+                        <div class="services__ad-row-2">
+                            <span class="services__ad-discount">-20%</span>
+                        </div>
+                        <div class="services__ad-row-3">
+                            <p class="services__ad-description">1,5 часа портретной съемки + ретушь 10 снимков</p>
+                            <a href="#" class="services__ad-more">Узнать больше</a>
+                        </div>
+                    </div>
+                    <h3 class="services__done-heading">Выполненные работы</h3>
+                    <div class="services__done-works services__done-works--active" data-works="main">
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-1.webp" type="image/webp" />
+                                <img src="/images/services/done-work-1.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-2.webp" type="image/webp" />
+                                <img src="/images/services/done-work-2.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-3.webp" type="image/webp" />
+                                <img src="/images/services/done-work-3.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-4.webp" type="image/webp" />
+                                <img src="/images/services/done-work-4.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-5.webp" type="image/webp" />
+                                <img src="/images/services/done-work-5.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-6.webp" type="image/webp" />
+                                <img src="/images/services/done-work-6.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-7.webp" type="image/webp" />
+                                <img src="/images/services/done-work-7.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-8.webp" type="image/webp" />
+                                <img src="/images/services/done-work-8.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-9.webp" type="image/webp" />
+                                <img src="/images/services/done-work-9.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-10.webp" type="image/webp" />
+                                <img src="/images/services/done-work-10.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-11.webp" type="image/webp" />
+                                <img src="/images/services/done-work-11.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-12.webp" type="image/webp" />
+                                <img src="/images/services/done-work-12.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-13.webp" type="image/webp" />
+                                <img src="/images/services/done-work-13.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-14.webp" type="image/webp" />
+                                <img src="/images/services/done-work-14.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-15.webp" type="image/webp" />
+                                <img src="/images/services/done-work-15.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-16.webp" type="image/webp" />
+                                <img src="/images/services/done-work-16.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="services__done-works" data-works="extra">
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-17.webp" type="image/webp" />
+                                <img src="/images/services/done-work-17.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-18.webp" type="image/webp" />
+                                <img src="/images/services/done-work-18.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-19.webp" type="image/webp" />
+                                <img src="/images/services/done-work-19.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-20.webp" type="image/webp" />
+                                <img src="/images/services/done-work-20.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-21.webp" type="image/webp" />
+                                <img src="/images/services/done-work-21.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-22.webp" type="image/webp" />
+                                <img src="/images/services/done-work-22.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-23.webp" type="image/webp" />
+                                <img src="/images/services/done-work-23.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-24.webp" type="image/webp" />
+                                <img src="/images/services/done-work-24.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-25.webp" type="image/webp" />
+                                <img src="/images/services/done-work-25.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-26.webp" type="image/webp" />
+                                <img src="/images/services/done-work-26.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-27.webp" type="image/webp" />
+                                <img src="/images/services/done-work-27.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-28.webp" type="image/webp" />
+                                <img src="/images/services/done-work-28.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-29.webp" type="image/webp" />
+                                <img src="/images/services/done-work-29.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-30.webp" type="image/webp" />
+                                <img src="/images/services/done-work-30.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-31.webp" type="image/webp" />
+                                <img src="/images/services/done-work-31.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                        <div class="services__done-work">
+                            <picture>
+                                <source srcset="/images/services/done-work-32.webp" type="image/webp" />
+                                <img src="/images/services/done-work-32.jpg" alt="Фото" class="services__done-img" />
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="masterstrokes" id="masterstrokes">
+            <div class="masterstrokes__content container">
+                <h3 class="masterstrokes__heading">Мастер-классы</h3>
+                <div class="masterstrokes__blocks">
+                    <div class="masterstrokes__cover"></div>
+                    <div class="masterstrokes__description">
+                        <div class="masterstrokes__date">
+                            <svg width="14" height="14" class="masterstrokes__calendar">
+                                <use xlink:href="/images/sprite.svg#calendar-icon"></use>
+                            </svg>
+                            <span class="masterstrokes__date-text">8 июня</span>
+                            <svg width="14" height="14" class="masterstrokes__watch">
+                                <use xlink:href="/images/sprite.svg#watch-icon"></use>
+                            </svg>
+                            <span class="masterstrokes__time">15:00</span>
+                        </div>
+                        <h4 class="masterstrokes__title">Пленка для начинающих</h4>
+                        <p class="masterstrokes__text">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: семантический разбор внешних противодействий, в своём классическом представлении.</p>
+                        <a href="#" class="masterstrokes__more">Узнать больше</a>
+                    </div>
+                    <div class="masterstrokes__list">
+                        <div class="masterstrokes__masterstroke">
+                            <picture>
+                                <source srcset="/images/masterstrokes/master-1.webp" type="image/webp" />
+                                <img src="/images/masterstrokes/master-1.jpg" alt="Фото" class="masterstrokes__masterstroke-img" />
+                            </picture>
+                            <div class="masterstrokes__masterstroke-info">
+                                <div class="masterstrokes__date masterstrokes__date--small">
+                                    <svg width="14" height="14" class="masterstrokes__calendar">
+                                        <use xlink:href="/images/sprite.svg#calendar-icon"></use>
+                                    </svg>
+                                    <span class="masterstrokes__date-text">9 июня</span>
+                                    <svg width="14" height="14" class="masterstrokes__watch">
+                                        <use xlink:href="/images/sprite.svg#watch-icon"></use>
+                                    </svg>
+                                    <span class="masterstrokes__time">15:00</span>
+                                </div>
+                                <h4 class="masterstrokes__title masterstrokes__title--small">Ретушь. Продвинутый уровень</h4>
+                            </div>
+                        </div>
+                        <div class="masterstrokes__masterstroke">
+                            <picture>
+                                <source srcset="/images/masterstrokes/master-2.webp" type="image/webp" />
+                                <img src="/images/masterstrokes/master-2.jpg" alt="Фото" class="masterstrokes__masterstroke-img" />
+                            </picture>
+                            <div class="masterstrokes__masterstroke-info">
+                                <div class="masterstrokes__date masterstrokes__date--small">
+                                    <svg width="14" height="14" class="masterstrokes__calendar">
+                                        <use xlink:href="/images/sprite.svg#calendar-icon"></use>
+                                    </svg>
+                                    <span class="masterstrokes__date-text">10 июня</span>
+                                    <svg width="14" height="14" class="masterstrokes__watch">
+                                        <use xlink:href="/images/sprite.svg#watch-icon"></use>
+                                    </svg>
+                                    <span class="masterstrokes__time">16:00</span>
+                                </div>
+                                <h4 class="masterstrokes__title masterstrokes__title--small">Портретная съемка. Свет</h4>
+                            </div>
+                        </div>
+                        <div class="masterstrokes__masterstroke">
+                            <picture>
+                                <source srcset="/images/masterstrokes/master-3.webp" type="image/webp" />
+                                <img src="/images/masterstrokes/master-3.jpg" alt="Фото" class="masterstrokes__masterstroke-img" />
+                            </picture>
+                            <div class="masterstrokes__masterstroke-info">
+                                <div class="masterstrokes__date masterstrokes__date--small">
+                                    <svg width="14" height="14" class="masterstrokes__calendar">
+                                        <use xlink:href="/images/sprite.svg#calendar-icon"></use>
+                                    </svg>
+                                    <span class="masterstrokes__date-text">11 июня</span>
+                                    <svg width="14" height="14" class="masterstrokes__watch">
+                                        <use xlink:href="/images/sprite.svg#watch-icon"></use>
+                                    </svg>
+                                    <span class="masterstrokes__time">16:00</span>
+                                </div>
+                                <h4 class="masterstrokes__title masterstrokes__title--small">Макросъемка. Проблемы и нюансы</h4>
+                            </div>
+                        </div>
+                        <div class="masterstrokes__masterstroke">
+                            <picture>
+                                <source srcset="/images/masterstrokes/master-4.webp" type="image/webp" />
+                                <img src="/images/masterstrokes/master-4.jpg" alt="Фото" class="masterstrokes__masterstroke-img" />
+                            </picture>
+                            <div class="masterstrokes__masterstroke-info">
+                                <div class="masterstrokes__date masterstrokes__date--small">
+                                    <svg width="14" height="14" class="masterstrokes__calendar">
+                                        <use xlink:href="/images/sprite.svg#calendar-icon"></use>
+                                    </svg>
+                                    <span class="masterstrokes__date-text">13 июня</span>
+                                    <svg width="14" height="14" class="masterstrokes__watch">
+                                        <use xlink:href="/images/sprite.svg#watch-icon"></use>
+                                    </svg>
+                                    <span class="masterstrokes__time">18:00</span>
+                                </div>
+                                <h4 class="masterstrokes__title masterstrokes__title--small">Творческая ретушь для начинающих</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contacts container" id="contacts">
+            <h3 class="contacts__heading">Контакты</h3>
+            <div class="contacts__content">
+                <div class="contacts__map" id="map">
+                    <div class="contacts__description">
+                        <div class="contacts__close">
+                            <svg width="10" height="10" class="contacts__close-icon">
+                                <use xlink:href="/images/sprite.svg#close-icon"></use>
+                            </svg>
+                        </div>
+                        <div class="contacts__info">
+                            <h4 class="contacts__name">Студия “High pass”</h4>
+                            <div class="contacts__info-text">
+                                <span class="contacts__adress">107045, Москва, Даев переулок, дом 41, бизнес-центр «Даев Плаза», этаж 8, офис № 82 </span>
+                                <div class="contacts__call">
+                                    <svg width="22" height="22" class="contacts__call-icon">
+                                        <use xlink:href="/images/sprite.svg#call-icon"></use>
+                                    </svg>
+                                    <a href="tel:+749542423532" class="contacts__call-tel">+7 (495) 42-423-532</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts__request">
+                    <h4 class="contacts__title">Оставить заявку</h4>
+                    <p class="contacts__text">Оставьте ваши данные, указав в графе “Комментарий” желаемые время и дату съемки или другого мероприятия</p>
+                    <form action="/" autocomplete="on" method="POST" class="contacts__form" id="contacts-form">
+                        <div class="contacts__input-container">
+                            <input type="text" name="name" placeholder="Имя" class="contacts__input" id="contacts-name">
+                        </div>
+                        <div class="contacts__input-container">
+                            <input type="email" name="email" placeholder="E-mail" class="contacts__input" id="contacts-email">
+                        </div>
+                        <textarea name="comment" cols="30" rows="7" placeholder="Комментарий" class="contacts__input contacts__input-textarea"></textarea>
+                        <button type="submit" class="contacts__submit-btn">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__content container">
+            <div class="footer__logo-content">
+                <a href="#" class="footer__logo">
+                    <img src="/images/header/logo.png" alt="Лого" class="footer__logo-img" />
+                </a>
+                <span class="footer__logo-caption">Фотостудия High pass® 2018-2020</span>
+            </div>
+            <div class="footer__quote-content">
+                <p class="footer__quote">Которая из моих фотографий самая любимая? Та, которую я собираюсь снять завтра. <span class="footer__quote-author">© Имоджен Каннингем</span></p>
+            </div>
+            <div class="footer__socials-content">
+                <span class="footer__socials-caption">Больше интересного:</span>
+                <div class="footer__socials">
+                    <a href="#" class="footer__social">
+                        <svg width="30" height="30">
+                            <use xlink:href="/images/sprite.svg#instagram-icon"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__social">
+                        <svg width="30" height="30">
+                            <use xlink:href="/images/sprite.svg#facebook-icon"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__social">
+                        <svg width="30" height="30">
+                            <use xlink:href="/images/sprite.svg#vk-icon"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

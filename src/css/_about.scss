@@ -1,0 +1,218 @@
+.about {
+    background-color: $darkColor;
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, minmax(min-content, max-content));
+        gap: 25px $defaultGap;
+        padding-top: 30px;
+        padding-bottom: 70px;
+    }
+
+    &__textblock {
+        grid-row: 1 / span 2;
+        color: $whiteColor;
+    }
+
+    &__heading {
+        margin-bottom: 2px;
+        font-family: $secondaryFontFamily;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 31px;
+    }
+
+    &__text {
+        color: #cacaca;
+        line-height: 28px;
+    }
+
+    &__foto {
+        width: 100%;
+        height: 255px;
+        margin-top: 33px;
+        background-image: url(/images/about/about.webp), url(/images/about/about.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__subscribe-caption {
+        display: block;
+        margin-bottom: 16px;
+        color: $whiteColor;
+        font-family: $secondaryFontFamily;
+        font-size: 24px;
+        line-height: 22px;
+    }
+
+    &__form {
+        display: grid;
+        grid-template-columns: 1fr 126px;
+        gap: $defaultGap;
+    }
+
+    &__input-container {
+        position: relative;
+    }
+
+    &__input {
+        width: 100%;
+        height: 100%;
+        padding: 15px 23px;
+        border: none;
+        color: $whiteColor;
+        background-color: $grayColor;
+        transition: outline 150ms ease-in-out;
+    }
+
+    &__input--error {
+        outline: 1px solid #ff3030;
+    }
+
+    &__input::placeholder {
+        color: #cacaca;
+        transition: color 150ms ease-in-out;
+    }
+
+    &__submit-btn {
+        width: fit-content;
+        padding: 12px 19px;
+        border: 3px solid $orangeColor;
+        color: $whiteColor;
+        background-color: $orangeColor;
+        font-weight: 700;
+        line-height: 19px;
+        cursor: pointer;
+        transition: border-color 150ms ease-in-out, background-color 150ms ease-in-out;
+    }
+
+    &__input:focus {
+        outline: 1px solid $orangeColor;
+    }
+
+    &__submit-btn:active {
+        border: 3px solid $darkOrangeColor;
+        background-color: $darkOrangeColor;
+    }
+
+    &__submit-btn:focus {
+        border: 3px solid $darkOrangeColor;
+        background-color: $orangeColor;
+        outline: none;
+    }
+}
+
+@media (hover: hover) {
+    .about {
+        &__input:hover::placeholder {
+            color: $orangeColor;
+        }
+
+        &__submit-btn:hover {
+            border: 3px solid $paleOrangeColor;
+            background-color: $paleOrangeColor;
+        }
+
+        &__submit-btn:active {
+            border: 3px solid $darkOrangeColor;
+            background-color: $darkOrangeColor;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .about {
+        &__content {
+            grid-template-rows: 365px minmax(min-content, max-content);
+            gap: 24px $defaultGap;
+            padding-bottom: 147px;
+        }
+
+        &__foto {
+            height: 332px;
+            background-image: url(/images/about/about-1024.webp), url(/images/about/about-1024.jpg);
+        }
+
+        &__subscribe {
+            width: 344px;
+        }
+
+        &__form {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, minmax(min-content, max-content));
+            gap: 20px;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .about {
+        &__content {
+            grid-template-rows: 602px minmax(min-content, max-content);
+            padding-bottom: 61px;
+        }
+        
+        &__heading {
+            margin-bottom: 5px;
+        }
+
+        &__foto {
+            height: calc(100% - 33px);
+            background-image: url(/images/about/about-768.webp), url(/images/about/about-768.jpg);
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .about {
+        &__content {
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(3, minmax(min-content, max-content));
+            padding-top: 32px;
+            padding-bottom: 60px;
+        }
+
+        &__heading {
+            margin-bottom: 5px;
+            font-size: 18px;
+            line-height: 23px;
+        }
+
+        &__text {
+            font-size: 14px;
+            line-height: 25px;
+        }
+
+        &__foto {
+            height: 278px;
+            margin-top: 0;
+            background-image: url(/images/about/about-1024.webp), url(/images/about/about-1024.jpg);
+        }
+
+        &__subscribe {
+            width: 100%;
+        }
+
+        &__subscribe-caption {
+            margin-bottom: 14px;
+            font-size: 18px;
+        }
+
+        &__form {
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(2, minmax(min-content, max-content));
+        }
+
+        &__input {
+            padding: 11px 23px;
+        }
+
+        &__submit-btn {
+            padding: 9px 19px;
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+}

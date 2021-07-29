@@ -1,0 +1,74 @@
+@import '_variables.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: $defaultFontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $defaultFontSize;
+    line-height: $defaultLineHeight;
+}
+
+body {
+    min-width: 320px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+}
+
+.container {
+    max-width: 1290px;
+    margin: 0 auto;
+}
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0;
+	border: 0;
+	height: 1px; 
+	width: 1px; 
+	overflow: hidden;
+}
+
+.error {
+    position: absolute;
+    top: 3px;
+    left: 23px;
+    color: #ff3030;
+    font-size: 9px;
+    line-height: 10px;
+}
+
+@media (max-width: 1300px) {
+    .container {
+        max-width: 962px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        max-width: 714px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        max-width: 278px;
+    }
+}

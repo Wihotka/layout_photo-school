@@ -1,0 +1,236 @@
+.hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 637px;
+    gap: $defaultGap;
+    width: 100%;
+    padding-top: 33px;
+    padding-bottom: 40px;
+
+    &__offer {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        margin-top: 7px;
+        color: $whiteColor;
+        background-image: url(/images/hero/hero.webp), url(/images/hero/hero.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__inscription {
+        display: block;
+        width: fit-content;
+        height: fit-content;
+        margin: 15px;
+        margin-left: auto;
+        padding: 7px 15px;
+        background-color: #333;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    &__description {
+        width: fit-content;
+        margin: 60px;
+        margin-top: auto;
+    }
+
+    &__caption {
+        display: block;
+        margin-bottom: 3px;
+    }
+
+    &__title {
+        width: 427px;
+        margin-bottom: 19px;
+        font-family: $secondaryFontFamily;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 37px;
+    }
+
+    &__more {
+        display: block;
+        width: fit-content;
+        padding: 12px 19px;
+        border: 3px solid $orangeColor;
+        color: $whiteColor;
+        background-color: $orangeColor;
+        transition: border-color 150ms ease-in-out, background-color 150ms ease-in-out;
+    }
+
+    &__heading {
+        margin-bottom: 25px;
+        font-family: $secondaryFontFamily;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 25px;
+    }
+
+    &__works-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 300px 257px;
+        gap: $defaultGap;
+    }
+
+    &__work {
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__work-1 {
+        grid-column: 1 / span 2;
+        background-image: url(/images/hero/work-1.webp), url(/images/hero/work-1.jpg);
+    }
+
+    &__work-2 {
+        background-image: url(/images/hero/work-2.webp), url(/images/hero/work-2.jpg);
+    }
+
+    &__work-3 {
+        background-image: url(/images/hero/work-3.webp), url(/images/hero/work-3.jpg);
+    }
+
+    &__work-img {
+        width: 100%;
+    }
+
+    &__more:active {
+        border: 3px solid $darkOrangeColor;
+        background-color: $darkOrangeColor;
+    }
+
+    &__more:focus {
+        border: 3px solid $darkOrangeColor;
+        background-color: $orangeColor;
+        outline: none;
+    }
+}
+
+@media (hover: hover) {
+    .hero {
+        &__more:hover {
+            border: 3px solid $paleOrangeColor;
+            background-color: $paleOrangeColor;
+        }
+
+        &__more:active {
+            border: 3px solid $darkOrangeColor;
+            background-color: $darkOrangeColor;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .hero {
+        grid-template-rows: 623px;
+
+        &__description {
+            margin: 30px;
+            margin-top: auto;
+        }
+
+        &__caption {
+            margin-bottom: 8px;
+        }
+
+        &__title {
+            width: 406px;
+            margin-bottom: 20px;
+            font-size: 34px;
+            line-height: 34px;
+        }
+
+        &__works-content {
+            grid-template-rows: 332px 186px;
+        }
+
+        &__work-1 {
+            background-image: url(/images/hero/work-1-1024.webp), url(/images/hero/work-1-1024.jpg);
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .hero {
+        grid-template-rows: 454px;
+        padding-top: 38px;
+
+        &__offer {
+            margin-top: 2px;
+        }
+
+        &__caption {
+            margin-bottom: 14px;
+        }
+
+        &__title {
+            width: 239px;
+            margin-bottom: 23px;
+            line-height: 31px;
+        }
+
+        &__heading {
+            margin-bottom: 23px;
+            font-size: 22px;
+            line-height: $defaultLineHeight;
+        }
+
+        &__works-content {
+            grid-template-rows: 228px 133px;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .hero {
+        grid-template-columns: 100%;
+        grid-template-rows: 422px;
+        gap: 35px;
+        padding-top: 40px;
+
+        &__offer {
+            margin-top: 0;
+        }
+
+        &__inscription {
+            margin: 6px 5px 0 auto;
+            padding: 4px 7px;
+            font-size: 12px;
+            line-height: 14px;
+        }
+
+        &__caption {
+            margin-bottom: 10px;
+            font-size: 14px;
+            line-height: 16px;
+        }
+    
+        &__title {
+            width: 169px;
+            margin-bottom: 14px;
+            font-size: 24px;
+            line-height: 26px;
+        }
+
+        &__more {
+            padding: 9px 19px;
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        &__heading {
+            margin-bottom: 16px;
+            font-size: 18px;
+            line-height: 18px;
+        }
+
+        &__works-content {
+            grid-template-rows: 186px 105px;
+        }
+    }
+}

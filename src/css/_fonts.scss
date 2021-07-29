@@ -1,0 +1,43 @@
+@font-face {
+	font-family: 'Roboto';
+    src:
+        local('Roboto'),
+        url('/fonts/roboto-v27-latin_cyrillic-regular.woff2') format('woff2'),
+		url('/fonts/roboto-v27-latin_cyrillic-regular.woff') format('woff');
+	font-display: swap;
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+    src:
+        local('Roboto'),
+        url('/fonts/roboto-v27-latin_cyrillic-700.woff2') format('woff2'),
+		url('/fonts/roboto-v27-latin_cyrillic-700.woff') format('woff');
+	font-display: swap;
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TT Firs Neue';
+    src:
+        local('TT Firs Neue'),
+        url('/fonts/TTFirsNeue-Regular.woff2') format('woff2'),
+		url('/fonts/TTFirsNeue-Regular.woff') format('woff');
+	font-display: swap;
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TT Firs Neue';
+    src:
+        local('TT Firs Neue'),
+        url('/fonts/TTFirsNeue-Bold.woff2') format('woff2'),
+		url('/fonts/TTFirsNeue-Bold.woff') format('woff');
+	font-display: swap;
+	font-weight: 700;
+	font-style: normal;
+}

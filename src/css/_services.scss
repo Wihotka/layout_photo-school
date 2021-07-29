@@ -1,0 +1,812 @@
+.services {
+    padding-bottom: 40px;
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 410px;
+        gap: $defaultGap;
+    }
+
+    &__col-1 {
+        overflow: hidden;
+    }
+
+    &__heading {
+        margin-bottom: 9px;
+        font-family: $secondaryFontFamily;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 31px;
+    }
+
+    &__tabs {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(min-content, max-content));
+        gap: 129px;
+        width: fit-content;
+        margin-bottom: 30px;
+    }
+
+    &__tabs::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        display: block;
+        height: 4px;
+        background-color: $orangeColor;
+        transition: transform 300ms ease-in-out, width 150ms ease-in-out;
+    }
+
+    &__tabs--main::before {
+        width: 148px;
+        transform: translateX(0);
+    }
+
+    &__tabs--extra::before {
+        width: 133px;
+        transform: translateX(calc(410px - 133px));
+    }
+
+    &__tabs::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: #c4c4c4;
+    }
+
+    &__tab {
+        z-index: 1;
+        width: fit-content;
+        padding-bottom: 4px;
+        border: none;
+        color: #666;
+        background-color: inherit;
+        font-weight: 700;
+        line-height: 28px;
+        cursor: pointer;
+        transition: color 150ms ease-in-out, background-color 150ms ease-in-out;
+    }
+
+    &__tab--active {
+        color: $orangeColor;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 200%;
+        transition: transform 300ms ease-in-out;
+    }
+
+    &__wrapper--main {
+        transform: translateX(0);
+    }
+
+    &__wrapper--extra {
+        transform: translateX(-50%);
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 410px);
+        gap: 20px $defaultGap;
+        opacity: 0;
+        animation: slideDisappear 300ms linear alternate; 
+    }
+
+    &__list--active {
+        opacity: 1;
+        animation: slideAppear 300ms linear alternate; 
+    }
+
+    &__list-item {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(min-content, max-content));
+        gap: 28px;
+    }
+
+    &__list-item:nth-child(4n) {
+        margin-bottom: 10px;
+    }
+
+    &__list-item--main {
+        grid-column: 1 / span 2;
+    }
+
+    &__list-item--main:nth-child(2n) {
+        margin-bottom: 10px;
+    }
+
+    &__list-img {
+        width: 300px;
+        height: 140px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__list-img--extra {
+        width: 190px;
+    }
+
+    &__list-img-1 {
+        background-image: url(/images/services/service-1.webp), url(/images/services/service-1.jpg);
+    }
+
+    &__list-img-2 {
+        background-image: url(/images/services/service-2.webp), url(/images/services/service-2.jpg);
+    }
+    
+    &__list-img-3 {
+        background-image: url(/images/services/service-3.webp), url(/images/services/service-3.jpg);
+    }
+
+    &__list-img-4 {
+        background-image: url(/images/services/service-4.webp), url(/images/services/service-4.jpg);
+    }
+
+    &__list-img-5 {
+        background-image: url(/images/services/service-5.webp), url(/images/services/service-5.jpg);
+    }
+
+    &__list-img-6 {
+        background-image: url(/images/services/service-6.webp), url(/images/services/service-6.jpg);
+    }
+
+    &__list-img-7 {
+        background-image: url(/images/services/service-7.webp), url(/images/services/service-7.jpg);
+    }
+
+    &__list-img-8 {
+        background-image: url(/images/services/service-8.webp), url(/images/services/service-8.jpg);
+    }
+
+    &__list-img-9 {
+        background-image: url(/images/services/service-9.webp), url(/images/services/service-9.jpg);
+    }
+
+    &__list-img-10 {
+        background-image: url(/images/services/service-10.webp), url(/images/services/service-10.jpg);
+    }
+
+    &__list-img-11 {
+        background-image: url(/images/services/service-11.webp), url(/images/services/service-11.jpg);
+    }
+
+    &__list-img-12 {
+        background-image: url(/images/services/service-12.webp), url(/images/services/service-12.jpg);
+    }
+
+    &__list-img-13 {
+        background-image: url(/images/services/service-13.webp), url(/images/services/service-13.jpg);
+    }
+
+    &__list-img-14 {
+        background-image: url(/images/services/service-14.webp), url(/images/services/service-14.jpg);
+    }
+
+    &__list-img-15 {
+        background-image: url(/images/services/service-15.webp), url(/images/services/service-15.jpg);
+    }
+
+    &__list-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__list-title {
+        width: fit-content;
+        margin-bottom: 5px;
+        color: $darkColor;
+        font-family: $secondaryFontFamily;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 22px;
+        word-wrap: break-word;
+        transition: color 150ms ease-in-out, background-color 150ms ease-in-out;
+    }
+
+    &__list-title--extra {
+        width: 190px;
+    }
+
+    &__list-text {
+        margin-bottom: 10px;
+        color: #999;
+        line-height: 22px;
+    }
+
+    &__list-more {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        padding: 0 1px;
+        color: $orangeColor;
+        font-weight: 700;
+        line-height: 28px;
+        transition: color 150ms ease-in-out, background-color 150ms ease-in-out;
+    }
+
+    &__list-more-text {
+        margin-right: 4px;
+    }
+
+    &__arrow {
+        color: $orangeColor;
+        transform-origin: left;
+        transition: transform 150ms ease-in-out;
+    }
+
+    &__ad {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        width: 100%;
+        height: 490px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        padding: 20px 30px 30px;
+        background-image: url(/images/services/ad.webp), url(/images/services/ad.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__ad-row-1 {
+        color: #fff500;
+    }
+
+    &__ad-row-2 {
+        margin-top: auto;
+        margin-bottom: 10px;
+    }
+
+    &__ad-row-3 {
+        margin-top: auto;
+    }
+
+    &__ad-title {
+        font-family: $secondaryFontFamily;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 37px;
+    }
+
+    &__ad-caption {
+        font-family: $defaultFontFamily;
+        font-weight: 700;
+        line-height: 22px;
+    }
+
+    &__ad-discount {
+        display: block;
+        width: fit-content;
+        padding: 16px;
+        border: 3px solid #fff500;
+        border-radius: 100%;
+        color: #fff500;
+        font-family: $secondaryFontFamily;
+        font-weight: 700;
+        font-size: 28px;
+    }
+
+    &__ad-description {
+        width: 218px;
+        margin-bottom: 9px;
+        color: $whiteColor;
+        line-height: 22px;
+    }
+
+    &__ad-more {
+        display: block;
+        width: fit-content;
+        padding: 12px 19px;
+        border: 3px solid $orangeColor;
+        color: $whiteColor;
+        background-color: $orangeColor;
+        font-weight: 700;
+        line-height: 19px;
+        transition: border-color 150ms ease-in-out, background-color 150ms ease-in-out;
+    }
+
+    &__done-heading {
+        margin-bottom: 12px;
+        font-family: $secondaryFontFamily;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 31px;
+    }
+
+    @keyframes slideAppear {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0.25;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideDisappear {
+        0% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0.75;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    &__done-works {
+        display: none;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: $defaultGap;
+        opacity: 0;
+    }
+
+    &__done-works--active {
+        display: grid;
+        opacity: 1;
+        animation: slideAppear 300ms linear alternate; 
+    }
+
+    &__done-img {
+        width: 100%;
+    }
+
+    &__tab:active {
+        color: #666;
+        background-color: #ffd4c1;
+    }
+
+    &__tab--active:active {
+        color: $orangeColor;
+        background-color: inherit;
+    }
+
+    &__list-title:active {
+        color: $darkOrangeColor;
+        background-color: inherit;
+    }
+
+    &__list-title:focus {
+        color: $darkColor;
+        background-color: #ffd4c1;
+    }
+
+    &__list-more:active {
+        color: $darkOrangeColor;
+        background-color: inherit;
+    }
+
+    &__list-more:active &__arrow {
+        color: $darkOrangeColor;
+        transform: scaleX(1);
+    }
+
+    &__list-more:focus {
+        background-color: #ffd4c1;
+        outline: none;
+    }
+
+    &__ad-more:active {
+        border: 3px solid $darkOrangeColor;
+        background-color: $darkOrangeColor;
+    }
+
+    &__ad-more:focus {
+        border: 3px solid $darkOrangeColor;
+        background-color: $orangeColor;
+        outline: none;
+    }
+}
+
+@media (hover: hover) {
+    .services {
+        &__tab:hover {
+            color: $orangeColor;
+        }
+
+        &__tab:active {
+            color: #666;
+            background-color: #ffd4c1;
+        }
+
+        &__tab--active:active {
+            color: $orangeColor;
+            background-color: inherit;
+        }
+
+        &__list-title:hover {
+            color: $orangeColor;
+        }
+
+        &__list-title:active {
+            color: $darkOrangeColor;
+            background-color: inherit;
+        }
+
+        &__list-more:hover {
+            background-color: inherit;
+        }
+
+        &__list-more:hover &__arrow {
+            transform: scaleX(1.5);
+        }
+
+        &__list-more:active {
+            color: $darkOrangeColor;
+            background-color: inherit;
+        }
+
+        &__list-more:active &__arrow {
+            color: $darkOrangeColor;
+            transform: scaleX(1);
+        }
+
+        &__ad-more:hover {
+            border: 3px solid $paleOrangeColor;
+            background-color: $paleOrangeColor;
+        }
+
+        &__ad-more:active {
+            border: 3px solid $darkOrangeColor;
+            background-color: $darkOrangeColor;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .services {
+        &__content {
+            grid-template-columns: 1fr 342px;
+        }
+
+        &__tab {
+            line-height: 30px;
+        }
+
+        &__list {
+            grid-template-columns: repeat(2, 280px);
+        }
+
+        &__list-item:nth-child(4n) {
+            margin-bottom: 0;
+        }
+    
+        &__list-item--main:nth-child(2n) {
+            margin-bottom: 0;
+        }
+
+        &__list-item--extra {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, minmax(min-content, max-content));
+            gap: 8px;
+        }
+
+        &__list-img {
+            width: 218px;
+            height: 184px;
+        }
+
+        &__list-img--extra {
+            width: 280px;
+            height: 100px;
+        }
+    
+        &__list-img-1 {
+            background-image: url(/images/services/service-1-1024.webp), url(/images/services/service-1-1024.jpg);
+        }
+    
+        &__list-img-2 {
+            background-image: url(/images/services/service-2-1024.webp), url(/images/services/service-2-1024.jpg);
+        }
+        
+        &__list-img-3 {
+            background-image: url(/images/services/service-3-1024.webp), url(/images/services/service-3-1024.jpg);
+        }
+    
+        &__list-img-4 {
+            background-image: url(/images/services/service-4-1024.webp), url(/images/services/service-4-1024.jpg);
+        }
+    
+        &__list-img-5 {
+            background-image: url(/images/services/service-5-1024.webp), url(/images/services/service-5-1024.jpg);
+        }
+
+        &__list-title--extra {
+            width: 100%;
+            margin-bottom: 0;
+        }
+
+        &__ad {
+            background-image: url(/images/services/ad-1024.webp), url(/images/services/ad-1024.jpg);
+        }
+
+        &__done-works {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            gap: 22px $defaultGap;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .services {
+        &__content {
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(2, minmax(min-content, max-content));
+            gap: 22px;
+        }
+
+        &__heading {
+            margin-bottom: 10px;
+        }
+
+        &__tabs {
+            gap: 60px;
+        }
+
+        &__tabs--extra::before {
+            transform: translateX(calc(342px - 133px));
+        }
+
+        &__wrapper--main {
+            max-height: 1053px;
+        }
+
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 21px 28px;
+        }
+
+        &__list--main {
+            grid-template-rows: repeat(3, minmax(min-content, max-content));
+        }
+
+        &__list--extra {
+            grid-template-rows: repeat(5, minmax(min-content, max-content));
+        }
+
+        &__list-item--main {
+            grid-column: span 1;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, minmax(min-content, max-content));
+            gap: 14px;
+        }
+
+        &__list-img {
+            width: 100%;
+        }
+
+        &__list-img--extra {
+            width: 100%;
+            height: 172px;
+        }
+
+        &__list-img-1 {
+            background-image: url(/images/services/service-1.webp), url(/images/services/service-1.jpg);
+        }
+    
+        &__list-img-2 {
+            background-image: url(/images/services/service-2.webp), url(/images/services/service-2.jpg);
+        }
+        
+        &__list-img-3 {
+            background-image: url(/images/services/service-3.webp), url(/images/services/service-3.jpg);
+        }
+    
+        &__list-img-4 {
+            background-image: url(/images/services/service-4.webp), url(/images/services/service-4.jpg);
+        }
+    
+        &__list-img-5 {
+            background-image: url(/images/services/service-5.webp), url(/images/services/service-5.jpg);
+        }
+
+        &__list-title {
+            margin-bottom: 5px;
+        }
+
+        &__list-text {
+            margin-bottom: 3px;
+        }
+
+        &__ad {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            height: 336px;
+            margin-top: 0;
+            margin-bottom: 19px;
+            background-image: url(/images/services/ad-768.webp), url(/images/services/ad-768.jpg);
+        }
+    
+        &__ad-row-2 {
+            margin: 0 0 0 auto;
+        }
+    
+        &__ad-row-3 {
+            margin-top: auto;
+        }
+
+        &__done-works {
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: $defaultGap;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .services {
+        padding-bottom: 50px;
+
+        &__heading {
+            margin-bottom: 4px;
+            font-size: 18px;
+            line-height: 23px;
+        }
+
+        &__tabs {
+            grid-template-columns: repeat(2, 1fr);
+            gap: $defaultGap;
+            margin-bottom: 20px;
+        }
+
+        &__tabs--main::before {
+            width: 130px;
+        }
+    
+        &__tabs--extra::before {
+            width: 114px;
+            transform: translateX(calc(278px - 114px));
+        }
+
+        &__tab {
+            font-size: 14px;
+            line-height: 28px;
+            white-space: nowrap;
+        }
+
+        &__wrapper--main {
+            max-height: 1691px;
+        }
+
+        &__list--main {
+            grid-template-rows: repeat(5, minmax(min-content, max-content));
+        }
+
+        &__list--extra {
+            grid-template-rows: repeat(10, minmax(min-content, max-content));
+        }
+
+        &__list {
+            grid-template-columns: 100%;
+        }
+
+        &__list-item--main {
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(2, minmax(min-content, max-content));
+            gap: 14px;
+        }
+
+        &__list-img-1 {
+            background-image: url(/images/services/service-1-320.webp), url(/images/services/service-1-320.jpg);
+        }
+    
+        &__list-img-2 {
+            background-image: url(/images/services/service-2-320.webp), url(/images/services/service-2-320.jpg);
+        }
+        
+        &__list-img-3 {
+            background-image: url(/images/services/service-3-320.webp), url(/images/services/service-3-320.jpg);
+        }
+    
+        &__list-img-4 {
+            background-image: url(/images/services/service-4-320.webp), url(/images/services/service-4-320.jpg);
+        }
+    
+        &__list-img-5 {
+            background-image: url(/images/services/service-5-320.webp), url(/images/services/service-5-320.jpg);
+        }
+
+        &__list-title {
+            margin-bottom: 7px;
+            font-size: $defaultFontSize;
+        }
+
+        &__list-text {
+            margin-bottom: 3px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        &__list-more {
+            font-size: 14px;
+        }
+
+        &__arrow {
+            transform: scale(0.8);
+        }
+
+        &__ad {
+            height: 422px;
+            margin-bottom: 22px;
+            background-image: url(/images/services/ad.webp), url(/images/services/ad.jpg);
+        }
+
+        &__ad-title {
+            font-size: 30px;
+            line-height: 32px;
+        }
+    
+        &__ad-caption {
+            font-size: 14px;
+        }
+
+        &__ad-discount {
+            margin-top: 4px;
+            padding: 9px 11px;
+            font-size: 21px;
+        }
+
+        &__ad-row-3 {
+            grid-column: 1 / span 2;
+        }
+
+        &__ad-description {
+            margin-bottom: 16px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        &__ad-more {
+            padding: 9px 19px;
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        &__done-heading {
+            margin-bottom: 14px;
+            font-size: 18px;
+            line-height: 23px;
+        }
+
+        &__done-works {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+            gap: 31px $defaultGap;
+        }
+
+        &__list-more:active &__arrow {
+            transform: scale(0.8);
+        }
+
+        @media (hover: hover) {
+            &__list-more:hover &__arrow {
+                transform: scaleX(1) scaleY(0.8);
+            }
+    
+            &__list-more:active &__arrow {
+                transform: scale(0.8);
+            }
+        }
+    }
+}

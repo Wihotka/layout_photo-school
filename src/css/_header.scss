@@ -1,0 +1,464 @@
+@import '_variables.scss';
+
+.header {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        width: 100%;
+        height: 80px;
+        background-color: $darkColor;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 0;
+        width: 100%;
+        height: 45px;
+        background-color: $grayColor;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: minmax(min-content, max-content) repeat(3, 1fr);
+        grid-template-rows: 80px 45px;
+        align-items: center;
+        height: 125px;
+    }
+
+    &__logo {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        width: 190px;
+        margin-right: 138px;
+    }
+
+    &__logo-img {
+        width: 100%;
+    }
+
+    &__nav {
+        grid-column: 2 / span 2;
+        grid-row: 1 / span 1;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 79px;
+        justify-content: flex-start;
+        transform-origin: top;
+    }
+
+    &__nav-link {
+        width: fit-content;
+        padding: 1px;
+        color: $whiteColor;
+        white-space: nowrap;
+        transition: color 150ms ease-in-out, background-color 150ms ease-in-out;
+    }
+
+    &__socials {
+        grid-column: 4 / span 1;
+        grid-row: 1 / span 1;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    &__social {
+        display: flex;
+        width: fit-content;
+        color: #cacaca;
+        transition: color 150ms ease-in-out;
+    }
+
+    &__call {
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 1;
+        display: flex;
+        align-items: center;
+        padding: 1px 1px 1px 0;
+        color: $whiteColor;
+        font-family: $secondaryFontFamily;
+        font-weight: 700;
+        transition: color 150ms ease-in-out, background-color 150ms ease-in-out;
+    }
+
+    &__call-icon {
+        display: flex;
+        opacity: 0.7;
+    }
+
+    &__search {
+        grid-column: 3 / span 2;
+        grid-row: 2 / span 1;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-left: auto;
+        color: #e9e9e9;
+    }
+
+    &__search-input {
+        width: 169px;
+        border: none;
+        border-bottom: 1px solid #e9e9e9;
+        color: #e9e9e9;
+        background-color: inherit;
+        font-family: $secondaryFontFamily;
+        font-size: 14px;
+        line-height: 17px;
+        transition: border-color 150ms ease-in-out;
+        caret-color: $whiteColor;
+        outline: none;
+    }
+
+    &__search-icon {
+        display: flex;
+        opacity: 0.7;
+    }
+
+    &__burger {
+        display: none;
+    }
+
+    &__nav-link:active {
+        color: $darkOrangeColor;
+        background-color: inherit;
+    }
+
+    &__nav-link:focus {
+        color: $whiteColor;
+        background-color: $paleOrangeColor;
+        outline: none;
+    }
+
+    &__social:active {
+        color: $darkOrangeColor;
+    }
+
+    &__social:focus {
+        color: $paleOrangeColor;
+        outline: none;
+    }
+
+    &__call:active {
+        color: $darkOrangeColor;
+        background-color: inherit;
+    }
+
+    &__call:focus {
+        color: $whiteColor;
+        background-color: $paleOrangeColor;
+        outline: none;
+    }
+
+    &__search:active &__search-input {
+        border-bottom: 1px solid $orangeColor;
+    }
+
+    &__search-input:focus {
+        border-bottom: 1px solid $darkOrangeColor;
+    }
+
+    &__burger:active {
+        border-top: 2px solid $darkOrangeColor;
+    }
+
+    &__burger:active::before {
+        background-color: $darkOrangeColor;
+    }
+
+    &__burger:active::after {
+        background-color: $darkOrangeColor;
+    }
+}
+
+// disappearing placeholder on focus
+
+:focus::-webkit-input-placeholder {
+    color: transparent
+}
+  
+:focus::-moz-placeholder {
+    color: transparent
+}
+  
+:focus:-moz-placeholder {
+    color: transparent
+}
+  
+:focus:-ms-input-placeholder {
+    color: transparent
+}
+
+@media (hover: hover) {
+    .header {
+        &__nav-link:hover {
+            color: $orangeColor;
+            background-color: inherit;
+        }
+
+        &__nav-link:active {
+            color: $darkOrangeColor;
+            background-color: inherit;
+        }
+
+        &__social:hover {
+            color: $orangeColor;
+        }
+
+        &__social:active {
+            color: $darkOrangeColor;
+        }
+
+        &__call:hover {
+            color: $orangeColor;
+            background-color: inherit;
+        }
+
+        &__call:active {
+            color: $darkOrangeColor;
+            background-color: inherit;
+        }
+
+        &__search:hover &__search-input {
+            border-bottom: 1px solid $orangeColor;
+        }
+
+        &__search:active &__search-input {
+            border-bottom: 1px solid $orangeColor;
+        }
+
+        &__burger:hover {
+            border-top: 2px solid $orangeColor;
+        }
+
+        &__burger:hover::before {
+            background-color: $orangeColor;
+        }
+
+        &__burger:hover::after {
+            background-color: $orangeColor;
+        }
+
+        &__burger:active {
+            border-top: 2px solid $darkOrangeColor;
+        }
+
+        &__burger:active::before {
+            background-color: $darkOrangeColor;
+        }
+
+        &__burger:active::after {
+            background-color: $darkOrangeColor;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .header {
+        &__logo {
+            width: 166px;
+            margin-right: 52px;
+        }
+
+        &__nav {
+            gap: 33px;
+        }
+
+        &__search-input {
+            width: 196px;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .header {
+        &__content {
+            grid-template-columns: repeat(2, 1fr) 196px 66px;
+        }
+
+        &__logo {
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 1;
+            margin-right: 0;
+        }
+
+        &__nav {
+            grid-column: 1 / span 4;
+            grid-row: 2 / span 1;
+            gap: 72px;
+        }
+
+        &__socials {
+            display: none;
+        }
+
+        &__call {
+            grid-column: 3 / span 1;
+            grid-row: 1 / span 1;
+        }
+
+        &__search {
+            grid-column: 4 / span 1;
+            grid-row: 1 / span 1;
+        }
+
+        &__search-icon {
+            transform: scale(1.575);
+            color: #bcbcbc;
+            opacity: 1;
+            cursor: pointer;
+            transition: color 150ms ease-in-out;
+        }
+
+        &__search-input {
+            display: none;
+        }
+
+        &__search-icon:active {
+            color: $darkOrangeColor
+        }
+
+        @media (hover: hover) {
+            &__search-icon:hover {
+                color: $orangeColor;
+            }
+
+            &__search-icon:active {
+                color: $darkOrangeColor
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .header {
+        &::before {
+            height: 70px;
+        }
+
+        &__content {
+            grid-template-columns: 1fr minmax(min-content, max-content);
+            grid-template-rows: 70px 45px;
+            height: 115px;
+        }
+
+        &__logo {
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 1;
+            width: 111px;
+        }
+
+        @keyframes burgerAppear {
+            0% {
+                transform: translateY(45px) scaleY(0);
+            }
+
+            100% {
+                transform: translateY(45px) scaleY(1);
+            }
+        }
+
+        &__nav {
+            grid-column: 1 / span 1;
+            grid-row: 2 / span 1;
+            align-self: flex-start;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(5, 1fr);
+            gap: 0;
+            border: 1px solid #e9e9e9;
+            background-color: $grayColor;
+            transform: translateY(45px) scaleY(0);
+        }
+
+        &__nav--active {
+            transform: translateY(45px) scaleY(1);
+            animation: burgerAppear 300ms alternate ease-in-out;
+        }
+
+        &__nav-item {
+            border-bottom: 1px solid #e9e9e9;
+        }
+
+        &__nav-item:last-child {
+            border-bottom: none;
+        }
+
+        &__nav-link {
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 5px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        &__call {
+            grid-column: 2 / span 1;
+            grid-row: 2 / span 1;
+            padding: 1px 1px 1px 0;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 18px;
+            transition: color 150ms ease-in-out, background-color 150ms ease-in-out;
+        }
+
+        &__search {
+            grid-column: 2 / span 1;
+            grid-row: 1 / span 1;
+        }
+
+        &__search-icon {
+            color: $whiteColor;
+            transform: translateX(3px) translateY(2px) scale(1.25);
+        }
+
+        &__burger {
+            grid-column: 1 / span 1;
+            grid-row: 2 / span 1;
+            position: relative;
+            display: block;
+            width: 20px;
+            height: 18px;
+            border: none;
+            border-top: 2px solid $whiteColor;
+            background-color: inherit;
+            cursor: pointer;
+            transition: border-color 150ms ease-in-out;
+        }
+
+        &__burger::before {
+            content: '';
+            position: absolute;
+            top: calc(50% - 2px);
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $whiteColor;
+            transition: background-color 150ms ease-in-out;
+        }
+
+        &__burger::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            height: 2px;
+            background-color: $whiteColor;
+            transform-origin: left;
+            transition: background-color 150ms ease-in-out;
+        }
+    }
+}
