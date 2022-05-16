@@ -1,5 +1,5 @@
 # Skillbox - Photo School
-This project was made as a layout coursework for __Skillbox__ online school. You can check info below for more deatails.
+This project was made as a layout coursework for __Skillbox__ online school. You can check info below for more details.
 
 ## Instruments
 - HTML5
